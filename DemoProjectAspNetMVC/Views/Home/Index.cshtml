@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using DemoProjectAspNetMVC.Resources
+@using Microsoft.Extensions.Localization
+
+@model Employee
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = Localizer["title"];
+}
+
+<div class="text-center">
+    <h1 class="display-4 text-light">@Localizer["title"]</h1>
+    <div class="row mt-lg-5 justify-content-center">
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-primary my-beautiful-Button">
+            <i class="bi bi-arrow-right-square"></i>&nbsp;@Localizer["seeMore"]
+        </a>
+    </div>
+
+
+
+</div>
